@@ -195,6 +195,7 @@ def classify(model, image_transforms, image_path, classes):
     #print(predicted)
 
     print(classes[predicted.item()])
+#don't forget to change the below address to where ever you keep the folder for your pokemon
 os.chdir("/Users/Owner/OneDrive/Desktop/images/eval/")
 for picture in os.listdir():
     classify(resnet18_model, image_transforms, picture, classes)
